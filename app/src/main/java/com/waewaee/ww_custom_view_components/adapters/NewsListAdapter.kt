@@ -3,7 +3,6 @@ package com.waewaee.ww_custom_view_components.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.waewaee.ww_custom_view_components.R
-import com.waewaee.ww_custom_view_components.adapters.BaseRecyclerAdapter
 import com.waewaee.ww_custom_view_components.data.vos.NewsVO
 import com.waewaee.ww_custom_view_components.delegates.NewsItemDelegate
 import com.waewaee.ww_custom_view_components.veiws.viewholder.BaseNewsViewHolder
@@ -31,7 +30,7 @@ class NewsListAdapter(delegate: NewsItemDelegate) : BaseRecyclerAdapter<BaseNews
             }
             VIEW_TYPE_SMALL -> {
                 val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_news_smalll, parent, false)
+                    .inflate(R.layout.item_news_small, parent, false)
                 return NewsSmallViewHolder(view, mDelegate)
             }
             else -> {

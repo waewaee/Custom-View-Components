@@ -4,9 +4,12 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.waewaee.ww_custom_view_components.data.vos.NewsVO
 import com.waewaee.ww_custom_view_components.delegates.NewsItemDelegate
-import kotlinx.android.synthetic.main.item_news_smalll.view.*
+import com.waewaee.ww_custom_view_components.veiws.viewpods.ReactionViewPod
+import kotlinx.android.synthetic.main.item_news_small.view.*
 
-class NewsSmallViewHolder(itemView: View, delegate : NewsItemDelegate) : BaseNewsViewHolder(itemView){
+class NewsSmallViewHolder(itemView: View, private val delegate : NewsItemDelegate) : BaseNewsViewHolder(itemView){
+
+    private val mViewPodReaction = itemView.viewPodReaction as ReactionViewPod
 
     init {
         itemView.setOnClickListener {
@@ -22,5 +25,8 @@ class NewsSmallViewHolder(itemView: View, delegate : NewsItemDelegate) : BaseNew
             .load(data.heroImage)
             .into(itemView.ivNewsImage)
         itemView.tvNewsHeadLine.text = data.title
+
+        mViewPodReaction.bindData(data)
+        mViewPodReaction.setDelegate(delegate)
     }
 }
