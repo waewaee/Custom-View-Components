@@ -1,5 +1,6 @@
 package com.waewaee.ww_custom_view_components.mvp.presenters
 
+import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.waewaee.ww_custom_view_components.data.models.NewsModelImpl
@@ -11,6 +12,18 @@ class MainPresenterImpl : MainPresenter, AbstractBasePresenter<MainView>() {
 
     override fun onTapNewsItem(newsId: Int) {
         mView?.navigateToNewsDetails(newsId)
+    }
+
+    override fun onTapLike() {
+        Log.d("TAG", "onTapLike")
+    }
+
+    override fun onTapComment() {
+        Log.d("TAG", "onTapComment")
+    }
+
+    override fun onTapShare() {
+        Log.d("TAG", "onTaShare")
     }
 
     override fun onSwipeRefresh(lifecycleOwner: LifecycleOwner) {
