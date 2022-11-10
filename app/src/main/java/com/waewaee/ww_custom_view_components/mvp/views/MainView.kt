@@ -6,7 +6,7 @@ import com.waewaee.ww_custom_view_components.mvp.views.BaseView
 interface MainView : BaseView {
     fun displayNewsList(newsList: List<NewsVO>)
     fun navigateToNewsDetails(newsId: Int)
-    fun displayEmptyView()
+//    fun displayEmptyView()
     fun enableSwipeRefresh()
     fun disableSwipeRefresh()
 }

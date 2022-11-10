@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.waewaee.ww_custom_view_components.veiws.components.SmartRecyclerView
                 android:id="@+id/rvNews"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

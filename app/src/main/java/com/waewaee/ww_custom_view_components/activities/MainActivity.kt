@@ -29,7 +29,6 @@ class MainActivity : BaseActivity(), MainView {
 
         setUpPresenter()
 
-        hideEmptyView()
         setUpSwipeRefresh()
         setUpRecyclerView()
         setUpViewPod()
@@ -42,10 +41,6 @@ class MainActivity : BaseActivity(), MainView {
 
     override fun navigateToNewsDetails(newsId: Int) {
         startActivity(NewsDetailActivity.newItent(this, newsId))
-    }
-
-    override fun displayEmptyView() {
-        showEmptyView()
     }
 
     override fun enableSwipeRefresh() {
@@ -78,14 +73,7 @@ class MainActivity : BaseActivity(), MainView {
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvNews.layoutManager = linearLayoutManager
         rvNews.adapter = mAdapter
-    }
-
-    private fun showEmptyView() {
-        vpEmpty.visibility = View.VISIBLE
-    }
-
-    private fun hideEmptyView() {
-        vpEmpty.visibility = View.GONE
+        rvNews.setEmptyView(viewPodEmpty)
     }
 
 }
