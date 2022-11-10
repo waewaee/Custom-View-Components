@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/item_news.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/item_news_small.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/item_news_smalll.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/view_pod_empty.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/WWCustomViewComponents/app/src/main/res/layout/view_pod_reaction.xml" value="0.2" />
       </map>
     </option>
