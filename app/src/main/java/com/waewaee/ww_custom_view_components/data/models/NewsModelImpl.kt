@@ -10,9 +10,9 @@ import io.reactivex.schedulers.Schedulers
 
 object NewsModelImpl : NewsModel, BaseModel() {
 
-    override fun getAllNews(onError: (String) -> Unit): LiveData<List<NewsVO>> {
-        return mTheDB.newsDao()
-            .getAllNews()
+    override fun getAllNews(onError: (String) -> Unit): LiveData<List<NewsVO>>? {
+        return mTheDB?.newsDao()
+            ?.getAllNews()
     }
 
     @SuppressLint("CheckResult")
@@ -23,15 +23,15 @@ object NewsModelImpl : NewsModel, BaseModel() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({
-                mTheDB.newsDao().insertAllNews(it)
+                mTheDB?.newsDao()?.insertAllNews(it)
             },{
                 onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
             })
     }
 
 
-    override fun getNewsById(newsId: Int): LiveData<NewsVO> {
+    override fun getNewsById(newsId: Int): LiveData<NewsVO>? {
 
-        return mTheDB.newsDao().getNewsById(newsId)
+        return mTheDB?.newsDao()?.getNewsById(newsId)
     }
 }

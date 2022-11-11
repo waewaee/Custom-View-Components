@@ -42,10 +42,10 @@ class MainPresenterImpl : MainPresenter, AbstractBasePresenter<MainView>() {
         mView?.enableSwipeRefresh()
         mNewsModel.getAllNews(onError = {
             mView?.disableSwipeRefresh()
-            mView?.displayEmptyView()
-        }).observe(lifeCycleOwner, Observer {
+//            mView?.displayEmptyView()
+        })?.observe(lifeCycleOwner, Observer {
             mView?.disableSwipeRefresh()
-            if (it.isEmpty()) mView?.displayEmptyView() else mView?.displayNewsList(it)
+//            if (it.isEmpty()) mView?.displayEmptyView() else mView?.displayNewsList(it)
         })
     }
 

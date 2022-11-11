@@ -30,8 +30,8 @@ class MainActivity : BaseActivity(), MainView {
         setUpPresenter()
 
         setUpSwipeRefresh()
-        setUpRecyclerView()
         setUpViewPod()
+        setUpRecyclerView()
         mPresenter.onUiReady(this)
     }
 

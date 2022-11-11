@@ -33,7 +33,7 @@ class NewsDetailActivity : BaseActivity() {
 
         val newsId = intent.getIntExtra(NEWS_ID_EXTRA, 0)
         mNewsModel.getNewsById(newsId)
-            .observe(this, Observer {
+            ?.observe(this, Observer {
                 bindData(it)
             })
     }

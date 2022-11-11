@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
 abstract class BaseModel {
 
     protected var mNewsApi: NewsApi
-    protected lateinit var mTheDB: NewsDB
+    protected var mTheDB: NewsDB? = null
 
     init {
         val mOkHttpClient = OkHttpClient.Builder()
