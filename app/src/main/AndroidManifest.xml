@@ -43,6 +43,12 @@
             android:exported="true">
         </activity>
 
+        <activity
+            android:name=".activities.FanControlActivity"
+            android:exported="true">
+
+        </activity>
+
     </application>
 
 </manifest>
